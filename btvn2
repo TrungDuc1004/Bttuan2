@@ -26,7 +26,7 @@
         <option value="nam2">Năm 2</option>
         <option value="nam3">Năm 3</option>
         <option value="nam4">Năm 4</option>
-        <option value="nam5">Năm 5</option>
+    
     </select> <br><br>
 
     <label for="sum">Tổng:</label>
@@ -50,7 +50,7 @@
                      document.getElementById("kq").innerHTML ="SX";
                     // document.getElementById("kq").style.background = "red";
                      document.getElementById("kq").style.color = "red";
-                } else if (tong >= 😎 {
+                } else if (tong >= 8) {
                      alert("Giỏi");
                      document.getElementById("kq").innerHTML ="Giỏi";
                      document.getElementById("kq").style.color = "red";
@@ -62,7 +62,7 @@
                      alert("TB");
                      document.getElementById("kq").innerHTML ="TB";
                      document.getElementById("kq").style.color = "red";
-                } else if (tong == 0) {
+                } else if (tong >= 0 && tong < 5) {
                      alert("Yếu");  
                      document.getElementById("kq").innerHTML ="Yếu";
                      document.getElementById("kq").style.color = "red";
