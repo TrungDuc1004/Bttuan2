@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{
+            color: blue;
+            font-size: 30px;
+            font-weight: bold; 
+          }
+    </style>
+</head>
+<body>
+    <p class="a">Bang Diem Cua Em</p>
+    <label for="ki1">Điểm kì 1:</label>
+    <input type="number" id="ki1"> <br><br>
+
+    <label for="ki2">Điểm kì 2:</label>
+    <input type="number" id="ki2"> <br><br>
+
+    <label for="chooseOption">Chọn năm:</label>
+    <select id="chooseOption">
+        <option value="nam1">Năm 1</option>
+        <option value="nam2">Năm 2</option>
+        <option value="nam3">Năm 3</option>
+        <option value="nam4">Năm 4</option>
+        <option value="nam5">Năm 5</option>
+    </select> <br><br>
+
+    <label for="sum">Tổng:</label>
+    <input type="number" id="sum" readonly> <br><br>   <!-- dùng readonly để kh thay đổi gtri input , chỉ thay đổi khi thay đổi 2 gtri input được nhập vào ở trên  -->
+    
+
+    <button onclick="tinhdiem()">OK</button>
+    <button>Cancel</button>
+    <p id="kq" ></p>
+
+    <script>
+        function tinhdiem() {
+            var diemki1 = parseFloat(document.getElementById("ki1").value);
+            var diemki2 = parseFloat(document.getElementById("ki2").value);
+            var tong = (diemki1 + diemki2) / 2;
+            document.getElementById("sum").value = tong; //gắn gtri tong vào input "sum"
+            
+            if (tong <= 10 && tong >= 0) {
+                if (tong >= 9) {
+                     alert("SX");
+                     document.getElementById("kq").innerHTML ="SX";
+                    // document.getElementById("kq").style.background = "red";
+                     document.getElementById("kq").style.color = "red";
+                } else if (tong >= 😎 {
+                     alert("Giỏi");
+                     document.getElementById("kq").innerHTML ="Giỏi";
+                     document.getElementById("kq").style.color = "red";
+                } else if (tong > 7) {
+                     alert("Khá");
+                     document.getElementById("kq").innerHTML ="Khá";
+                     document.getElementById("kq").style.color = "red";
+                } else if (tong >= 5) {
+                     alert("TB");
+                     document.getElementById("kq").innerHTML ="TB";
+                     document.getElementById("kq").style.color = "red";
+                } else if (tong == 0) {
+                     alert("Yếu");  
+                     document.getElementById("kq").innerHTML ="Yếu";
+                     document.getElementById("kq").style.color = "red";
+                }
+            } else {
+                 alert("vui lòng thử lại");
+                document.getElementById("sum").style.display = "none";  //ẩn đi input tổng
+              
+            }
+        }
+    </script>
+</body>
+</html>
