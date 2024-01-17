@@ -41,7 +41,7 @@
         function tinhdiem() {
             var diemki1 = parseFloat(document.getElementById("ki1").value);
             var diemki2 = parseFloat(document.getElementById("ki2").value);
-            var tong = (diemki1 + diemki2) / 2;
+            var tong = (diemki1 + diemki2*2) / 3;
             document.getElementById("sum").value = tong; //gắn gtri tong vào input "sum"
             
             if (tong <= 10 && tong >= 0) {
